@@ -1,7 +1,7 @@
 
-# database.py - база продуктов для калькулятора калорий
+#база продуктов для калькулятора калорий
 
-# Словарь с продуктами и их калорийностью на 100 грамм
+#Словарь с продуктами и их калорийностью на 100 грамм
 products = {
     "гречка": 110,
     "рис": 130,
@@ -37,13 +37,13 @@ def get_all_products():
     """Возвращает список всех продуктов в базе"""
     return list(products.keys())
 
-def add_product(product_name, calories_per_100g):
+def add_product(product_name, calories_na_100g):
     """
     Добавляет новый продукт в базу.
-    product_name - название продукта (строка)
-    calories_per_100g - калорий на 100 грамм (число)
+    product_name - название продукта 
+    calories_na_100g - калорий на 100 грамм 
     """
-    products[product_name.lower()] = calories_per_100g
+    products[product_name.lower()] = calories_na_100g
     return True
 
 def search_products(search_term):
@@ -54,9 +54,3 @@ def search_products(search_term):
         if search_term in name:
             results.append((name, calories))
     return results
-
-# Пример использования (для проверки)
-if __name__ == "__main__":
-    print("База продуктов загружена!")
-    print(f"Всего продуктов: {len(products)}")
-    print(f"Калорийность гречки: {get_calories('гречка')} ккал на 100г")
