@@ -14,7 +14,6 @@
    - main.py
    - calculator.py
    - producti.py
-   - products_data.py
 
 2. Убедитесь, что установлен Python 3.6 или выше
 
